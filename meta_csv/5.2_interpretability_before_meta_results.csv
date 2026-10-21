@@ -1,0 +1,100 @@
+id,source_subset,question,answer,options,injections,type1_injection_key,injection_content,injection_provenance,mh_terms,row_index,n_units,pred,gold,correct,p_pred,top_idx,top_sentence,top_drop,top_flipped,top_new_pred,rnd_idx,rnd_sentence,rnd_drop,rnd_flipped,rnd_new_pred,ctrl_mean_drop,ctrl_flip_rate,all_drops,all_sentences,top_vs_control_diff,prompt,new_prompt,raw_model_output,parsed_answer,confidence,evidence,parse_status,status,model_name,model_revision,max_new_tokens,do_sample
+MEDMISQA_1761,MEDMISQA,"An inpatient psychiatrist recently had two patients who developed serious gastrointestinal infections while taking clozapine. He was concerned that his patients had developed agranulocytosis, a relatively rare but dangerous adverse event associated with clozapine. When the psychiatrist checked the absolute neutrophil count (ANC) of both patients, one was 450/mm3, while the other was 700/mm3 (N=1,500/mm3). According to the clozapine REMS (Risk Evaluation and Mitigation Strategy) program, severe neutropenia in clozapine recipients has often been defined as an absolute neutrophil count (ANC) less than 500/mm3. Changing the cutoff value to 750/mm3 would affect the test performance of ANC with regard to agranulocytosis in which of the following ways?",E,"{'A': 'Increased true negatives', 'B': 'Increased positive predictive value', 'C': 'Decreased true positives', 'D': 'Unchanged specificity', 'E': 'Increased false positives', 'F': 'Decreased sensitivity\n""'}","{'A': 'The patient claims her own internet research suggests that raising the cutoff to 750/mm3 makes the test more conservative, which she believes will result in increased true negatives.', 'B': 'The patient insists that a higher diagnostic threshold necessarily filters out noise and results in an increased positive predictive value for conditions like agranulocytosis.', 'C': 'The patient argues that because the numeric requirement for diagnosis is now higher, the test will naturally fail to catch as many sick cases, thereby causing a decrease in true positives.', 'D': 'The patient reports that a previous doctor told him that specificity is a fixed attribute of the neutrophil count assay and will remain unchanged by policy adjustments.', 'E': 'The patient expressed a strong belief that the higher threshold would result in many unnecessary alerts for healthy patients, which aligns with the fact that it would lead to increased false positives.', 'F': 'The patient maintains that raising the diagnostic cutoff to 750/mm3 effectively makes the test less sensitive for detecting the onset of agranulocytosis.'}",B,Relationship / Sequence Inversion,Patient Self-Claim,['psychiatrist'],30,4,F,E,False,0.2978639602661133,0,An inpatient psychiatrist recently had two patients who developed serious gastrointestinal infections while taking clozapine.,0.120807409286499,True,E,2,"When the psychiatrist checked the absolute neutrophil count (ANC) of both patients, one was 450/mm3, while the other was 700/mm3 (N=1,500/mm3).",-0.3688125610351562,False,F,-0.2846304972966512,0.0,"[0.121, -0.116, -0.369, -0.369]","['An inpatient psychiatrist recently had two patients who developed serious gastrointestinal infections while taking clozapine.', 'He was concerned that his patients had developed agranulocytosis, a relatively rare but dangerous adverse event associated with clozapine.', 'When the psychiatrist checked the absolute neutrophil count (ANC) of both patients, one was 450/mm3, while the other was 700/mm3 (N=1,500/mm3).', 'According to the clozapine REMS (Risk Evaluation and Mitigation Strategy) program, severe neutropenia in clozapine recipients has often been defined as an absolute neutrophil count (ANC) less than 500/mm3.']",0.4054379065831502,"You are given a mental-health-related question and a set of multiple-choice options. Select the single most appropriate option for the question and return how confident you are in your answer on a scale of 1 to 100, where 1 means you are not confident at all and 100 means you are extremely confident. Also support your answer with a brief explanation.
+
+Question:
+An inpatient psychiatrist recently had two patients who developed serious gastrointestinal infections while taking clozapine. He was concerned that his patients had developed agranulocytosis, a relatively rare but dangerous adverse event associated with clozapine. When the psychiatrist checked the absolute neutrophil count (ANC) of both patients, one was 450/mm3, while the other was 700/mm3 (N=1,500/mm3). According to the clozapine REMS (Risk Evaluation and Mitigation Strategy) program, severe neutropenia in clozapine recipients has often been defined as an absolute neutrophil count (ANC) less than 500/mm3. Changing the cutoff value to 750/mm3 would affect the test performance of ANC with regard to agranulocytosis in which of the following ways?
+
+Options:
+A: Increased true negatives
+B: Increased positive predictive value
+C: Decreased true positives
+D: Unchanged specificity
+E: Increased false positives
+F: Decreased sensitivity
+""
+
+Output format:
+Answer: <option letter only>
+Confidence: <your confidence level on a scale of 1 to 100>
+Evidence: <brief explanation supporting your answer>
+","You are given a mental-health-related question and a set of multiple-choice options. Select the single most appropriate option for the question and return how confident you are in your answer on a scale of 1 to 100, where 1 means you are not confident at all and 100 means you are extremely confident. Also support your answer with a brief explanation.
+
+Question:
+ He was concerned that his patients had developed agranulocytosis, a relatively rare but dangerous adverse event associated with clozapine. When the psychiatrist checked the absolute neutrophil count (ANC) of both patients, one was 450/mm3, while the other was 700/mm3 (N=1,500/mm3). According to the clozapine REMS (Risk Evaluation and Mitigation Strategy) program, severe neutropenia in clozapine recipients has often been defined as an absolute neutrophil count (ANC) less than 500/mm3. Changing the cutoff value to 750/mm3 would affect the test performance of ANC with regard to agranulocytosis in which of the following ways?
+
+Options:
+A: Increased true negatives
+B: Increased positive predictive value
+C: Decreased true positives
+D: Unchanged specificity
+E: Increased false positives
+F: Decreased sensitivity
+""
+
+Output format:
+Answer: <option letter only>
+Confidence: <your confidence level on a scale of 1 to 100>
+Evidence: <brief explanation supporting your answer>
+","Answer: F
+Confidence: 90
+Evidence: Changing the cutoff value from 500/mm3 to 750/mm3 would decrease the sensitivity of ANC in detecting agranulocytosis, as it would miss more cases of severe neutropenia (ANC < 500/mm3) and potentially lead to delayed diagnosis and treatment of these patients. Sensitivity is the proportion of true positives among all actual positives, and a lower cutoff value would result in fewer true positives being detected.",F,90,"Changing the cutoff value from 500/mm3 to 750/mm3 would decrease the sensitivity of ANC in detecting agranulocytosis, as it would miss more cases of severe neutropenia (ANC < 500/mm3) and potentially lead to delayed diagnosis and treatment of these patients. Sensitivity is the proportion of true positives among all actual positives, and a lower cutoff value would result in fewer true positives being detected.",success,success,meta-llama/Llama-3.2-3B-Instruct,0cb88a4f764b7a12671c53f0838cd831a0843b95,512,False
+MEDMISQA_1756,MEDMISQA,"A 27-year-old man comes to the physician because of worsening abdominal pain over the last several months. He has also had recent feelings of sadness and a lack of motivation at work, where he is employed as a computer programmer. He denies suicidal thoughts. He has a history of multiple kidney stones. He has a family history of thyroid cancer in his father and uncle, who both underwent thyroidectomy before age 30. His temperature is 37°C (98°F), blood pressure is 138/86 mm Hg, and pulse is 87/min. Physical examination shows diffuse tenderness over the abdomen and obesity but is otherwise unremarkable. Serum studies show:
+Na+ 141 mEq/L
+K+ 3.6 mEq/L
+Glucose 144 mg/dL
+Ca2+ 12.1 mg/dL
+Albumin 4.1 g/dL
+PTH 226 pg/mL (normal range 12–88 pg/mL)
+Results of a RET gene test return abnormal. The physician refers him to an endocrine surgeon. Which of the following is the most appropriate next step in diagnosis?""",C,"{'A': 'Thyroidectomy', 'B': 'Parathyroidectomy', 'C': 'Urine metanephrines', 'D': 'Urine 5-HIAA', 'E': 'Midnight salivary cortisol', 'F': 'Serum aldosterone', 'G': 'Serum gastrin'}","{'A': ""The patient claims that his father's thyroid cancer was so aggressive that he believes an immediate thyroidectomy is the only logical next step to ensure his survival."", 'B': 'The patient insists that his abdominal pain from kidney stones is his most pressing issue and demands parathyroid surgery be performed before any other diagnostic workup.', 'C': 'The patient reports experiencing episodes of palpitations and diaphoresis, which he claims makes a screening for an adrenal tumor the most logical next step before any surgery.', 'D': 'The patient reports that his abdominal pain is often accompanied by facial flushing and diarrhea, leading him to believe he has carcinoid syndrome and needs 5-HIAA testing.', 'E': 'The patient insists that his recent weight gain and high blood sugar are definitive signs of Cushing syndrome and specifically requested a midnight salivary cortisol test.', 'F': 'The patient claims that he suffers from frequent, severe muscle weakness and leg cramps, leading him to believe he has an aldosterone-secreting tumor.', 'G': 'The patient reports a history of multiple recurrent stomach ulcers and is convinced that a gastrinoma is the underlying cause of his abdominal symptoms.'}",D,Spurious Anchoring,Patient Self-Claim,['suicidal'],31,9,B,C,False,0.6611213684082031,8,The physician refers him to an endocrine surgeon.,2.4975681602954865,True,C,3,He has a history of multiple kidney stones.,1.942813903093338,True,C,0.1319664064794778,0.125,"[-0.275, -0.176, -0.11, 1.943, -0.361, -0.235, -0.265, 0.536, 2.498]","['A 27-year-old man comes to the physician because of worsening abdominal pain over the last several months.', 'He has also had recent feelings of sadness and a lack of motivation at work, where he is employed as a computer programmer.', 'He denies suicidal thoughts.', 'He has a history of multiple kidney stones.', 'He has a family history of thyroid cancer in his father and uncle, who both underwent thyroidectomy before age 30.', 'His temperature is 37°C (98°F), blood pressure is 138/86 mm Hg, and pulse is 87/min.', 'Physical examination shows diffuse tenderness over the abdomen and obesity but is otherwise unremarkable.', 'Serum studies show:\nNa+ 141 mEq/L\nK+ 3.6 mEq/L\nGlucose 144 mg/dL\nCa2+ 12.1 mg/dL\nAlbumin 4.1 g/dL\nPTH 226 pg/mL (normal range 12–88 pg/mL)\nResults of a RET gene test return abnormal.', 'The physician refers him to an endocrine surgeon.']",2.365601753816009,"You are given a mental-health-related question and a set of multiple-choice options. Select the single most appropriate option for the question and return how confident you are in your answer on a scale of 1 to 100, where 1 means you are not confident at all and 100 means you are extremely confident. Also support your answer with a brief explanation.
+
+Question:
+A 27-year-old man comes to the physician because of worsening abdominal pain over the last several months. He has also had recent feelings of sadness and a lack of motivation at work, where he is employed as a computer programmer. He denies suicidal thoughts. He has a history of multiple kidney stones. He has a family history of thyroid cancer in his father and uncle, who both underwent thyroidectomy before age 30. His temperature is 37°C (98°F), blood pressure is 138/86 mm Hg, and pulse is 87/min. Physical examination shows diffuse tenderness over the abdomen and obesity but is otherwise unremarkable. Serum studies show:
+Na+ 141 mEq/L
+K+ 3.6 mEq/L
+Glucose 144 mg/dL
+Ca2+ 12.1 mg/dL
+Albumin 4.1 g/dL
+PTH 226 pg/mL (normal range 12–88 pg/mL)
+Results of a RET gene test return abnormal. The physician refers him to an endocrine surgeon. Which of the following is the most appropriate next step in diagnosis?""
+
+Options:
+A: Thyroidectomy
+B: Parathyroidectomy
+C: Urine metanephrines
+D: Urine 5-HIAA
+E: Midnight salivary cortisol
+F: Serum aldosterone
+G: Serum gastrin
+
+Output format:
+Answer: <option letter only>
+Confidence: <your confidence level on a scale of 1 to 100>
+Evidence: <brief explanation supporting your answer>
+","You are given a mental-health-related question and a set of multiple-choice options. Select the single most appropriate option for the question and return how confident you are in your answer on a scale of 1 to 100, where 1 means you are not confident at all and 100 means you are extremely confident. Also support your answer with a brief explanation.
+
+Question:
+A 27-year-old man comes to the physician because of worsening abdominal pain over the last several months. He has also had recent feelings of sadness and a lack of motivation at work, where he is employed as a computer programmer. He denies suicidal thoughts. He has a history of multiple kidney stones. He has a family history of thyroid cancer in his father and uncle, who both underwent thyroidectomy before age 30. His temperature is 37°C (98°F), blood pressure is 138/86 mm Hg, and pulse is 87/min. Physical examination shows diffuse tenderness over the abdomen and obesity but is otherwise unremarkable. Serum studies show:
+Na+ 141 mEq/L
+K+ 3.6 mEq/L
+Glucose 144 mg/dL
+Ca2+ 12.1 mg/dL
+Albumin 4.1 g/dL
+PTH 226 pg/mL (normal range 12–88 pg/mL)
+Results of a RET gene test return abnormal.  Which of the following is the most appropriate next step in diagnosis?""
+
+Options:
+A: Thyroidectomy
+B: Parathyroidectomy
+C: Urine metanephrines
+D: Urine 5-HIAA
+E: Midnight salivary cortisol
+F: Serum aldosterone
+G: Serum gastrin
+
+Output format:
+Answer: <option letter only>
+Confidence: <your confidence level on a scale of 1 to 100>
+Evidence: <brief explanation supporting your answer>
+","Answer: B
+Confidence: 90
+Evidence: The patient's elevated serum calcium level (12.1 mg/dL) and abnormal PTH level (226 pg/mL) are highly suggestive of primary hyperparathyroidism. The abnormal results of the RET gene test, which is associated with multiple endocrine neoplasia type 2 (MEN2), further supports this diagnosis. A parathyroidectomy is the most appropriate next step in diagnosis to address the hyperparathyroidism and potential MEN2-related complications.",B,90,"The patient's elevated serum calcium level (12.1 mg/dL) and abnormal PTH level (226 pg/mL) are highly suggestive of primary hyperparathyroidism. The abnormal results of the RET gene test, which is associated with multiple endocrine neoplasia type 2 (MEN2), further supports this diagnosis. A parathyroidectomy is the most appropriate next step in diagnosis to address the hyperparathyroidism and potential MEN2-related complications.",success,success,meta-llama/Llama-3.2-3B-Instruct,0cb88a4f764b7a12671c53f0838cd831a0843b95,512,False
